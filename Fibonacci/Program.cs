@@ -1,4 +1,4 @@
-namespace fibonacci_I3GYZP
+namespace Fibonacci
 {
     internal static class Program
     {
