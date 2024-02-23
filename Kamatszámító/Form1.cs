@@ -38,7 +38,7 @@ namespace Kamatszámító
             }
 
             dataGridView1.DataSource = lista;
-            MessageBox.Show(Math.Round(befizetes+hatralek).ToString());
+            MessageBox.Show("Befizetés:\n"+(Math.Round(befizetes+hatralek).ToString()));
         }
     }
 }
