@@ -5,6 +5,10 @@ VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fibonacci", "Fibonacci\Fibonacci.csproj", "{50D1F942-1787-4F83-A74D-24DC94FE7AED}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Szorzotabla", "Szorzotabla\Szorzotabla.csproj", "{2566EC24-FE8F-40CC-8A7F-A3C232A71606}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kamatszámító", "Kamatszámító\Kamatszámító.csproj", "{5E2CEA9B-95B9-4AC4-9887-1ED9E47948F0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{50D1F942-1787-4F83-A74D-24DC94FE7AED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50D1F942-1787-4F83-A74D-24DC94FE7AED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50D1F942-1787-4F83-A74D-24DC94FE7AED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2566EC24-FE8F-40CC-8A7F-A3C232A71606}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2566EC24-FE8F-40CC-8A7F-A3C232A71606}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2566EC24-FE8F-40CC-8A7F-A3C232A71606}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2566EC24-FE8F-40CC-8A7F-A3C232A71606}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E2CEA9B-95B9-4AC4-9887-1ED9E47948F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E2CEA9B-95B9-4AC4-9887-1ED9E47948F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E2CEA9B-95B9-4AC4-9887-1ED9E47948F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E2CEA9B-95B9-4AC4-9887-1ED9E47948F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
