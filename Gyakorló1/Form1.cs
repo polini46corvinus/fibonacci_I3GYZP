@@ -62,12 +62,12 @@ namespace Gyakorló1
                         Controls.Add(uj3);
                     }
                     
-                }
+            }
             }*/
             
 
-
             
+
             // KARÁCSONYFA
 
             for (int i = 0; i < 11; i++)
@@ -86,7 +86,7 @@ namespace Gyakorló1
                     
                 }
             }
-
+            
         }
     }
 }
