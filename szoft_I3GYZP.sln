@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Szorzotabla", "Szorzotabla\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kamatszámító", "Kamatszámító\Kamatszámító.csproj", "{5E2CEA9B-95B9-4AC4-9887-1ED9E47948F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pascal-háromszög", "Pascal-háromszög\Pascal-háromszög.csproj", "{7EC8E8E7-8C3C-4563-90E7-B014777BA1BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pascal-háromszög", "Pascal-háromszög\Pascal-háromszög.csproj", "{7EC8E8E7-8C3C-4563-90E7-B014777BA1BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sakktábla", "Sakktábla\Sakktábla.csproj", "{DE7A59F4-FAF0-4693-A745-253C30733C5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sakktábla", "Sakktábla\Sakktábla.csproj", "{DE7A59F4-FAF0-4693-A745-253C30733C5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gyakorló1", "Gyakorló1\Gyakorló1.csproj", "{AA0F51CB-318B-4A20-B468-A5378398321F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{DE7A59F4-FAF0-4693-A745-253C30733C5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE7A59F4-FAF0-4693-A745-253C30733C5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE7A59F4-FAF0-4693-A745-253C30733C5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA0F51CB-318B-4A20-B468-A5378398321F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA0F51CB-318B-4A20-B468-A5378398321F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA0F51CB-318B-4A20-B468-A5378398321F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA0F51CB-318B-4A20-B468-A5378398321F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
