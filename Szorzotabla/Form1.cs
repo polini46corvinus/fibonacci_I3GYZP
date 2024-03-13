@@ -22,6 +22,7 @@ namespace Szorzotabla
                     b.Height = 40;
 
                     Controls.Add(b);
+                    //Merci
                 }
             }
         }
