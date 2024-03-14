@@ -20,7 +20,7 @@ namespace Kamatszámító
 
             List<Sor> lista = new List<Sor>();
 
-            while(hatralek>0)
+            while (hatralek > 0)
             {
                 hatralek += hatralek * (kamatertek * 1 / 100m);
                 hatralek -= torleszto;
@@ -33,12 +33,17 @@ namespace Kamatszámító
                 Sor ujSor = new Sor();
                 ujSor.Honap = honap;
                 ujSor.Hatralek = Math.Round(hatralek);
-                
+
                 lista.Add(ujSor);
             }
 
             dataGridView1.DataSource = lista;
-            MessageBox.Show("Befizetés:\n"+(Math.Round(befizetes+hatralek).ToString()));
+            MessageBox.Show("Befizetés:\n" + (Math.Round(befizetes + hatralek).ToString()));
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
