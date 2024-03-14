@@ -45,54 +45,55 @@
             dataGridView1.Location = new Point(68, 287);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(625, 150);
+            dataGridView1.Size = new Size(846, 178);
             dataGridView1.TabIndex = 0;
             // 
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(68, 26);
             label1.Name = "label1";
-            label1.Size = new Size(38, 15);
+            label1.Size = new Size(45, 15);
             label1.TabIndex = 1;
-            label1.Text = "label1";
+            label1.Text = "kérdés";
             // 
             // valaszGomb1
             // 
             valaszGomb1.BackColor = Color.LightGray;
             valaszGomb1.BorderStyle = BorderStyle.None;
-            valaszGomb1.Location = new Point(68, 65);
+            valaszGomb1.Location = new Point(70, 82);
             valaszGomb1.Multiline = true;
             valaszGomb1.Name = "valaszGomb1";
             valaszGomb1.ReadOnly = true;
-            valaszGomb1.Size = new Size(423, 37);
+            valaszGomb1.Size = new Size(631, 37);
             valaszGomb1.TabIndex = 3;
             // 
             // valaszGomb2
             // 
             valaszGomb2.BackColor = Color.LightGray;
             valaszGomb2.BorderStyle = BorderStyle.None;
-            valaszGomb2.Location = new Point(68, 121);
+            valaszGomb2.Location = new Point(70, 138);
             valaszGomb2.Multiline = true;
             valaszGomb2.Name = "valaszGomb2";
             valaszGomb2.ReadOnly = true;
-            valaszGomb2.Size = new Size(423, 37);
+            valaszGomb2.Size = new Size(631, 37);
             valaszGomb2.TabIndex = 4;
             // 
             // valaszGomb3
             // 
             valaszGomb3.BackColor = Color.LightGray;
             valaszGomb3.BorderStyle = BorderStyle.None;
-            valaszGomb3.Location = new Point(68, 177);
+            valaszGomb3.Location = new Point(70, 194);
             valaszGomb3.Multiline = true;
             valaszGomb3.Name = "valaszGomb3";
             valaszGomb3.ReadOnly = true;
-            valaszGomb3.Size = new Size(423, 37);
+            valaszGomb3.Size = new Size(631, 37);
             valaszGomb3.TabIndex = 5;
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(559, 67);
+            pictureBox1.Location = new Point(725, 82);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(189, 187);
             pictureBox1.TabIndex = 6;
@@ -100,7 +101,7 @@
             // 
             // kovetkezoGomb
             // 
-            kovetkezoGomb.Location = new Point(416, 231);
+            kovetkezoGomb.Location = new Point(626, 246);
             kovetkezoGomb.Name = "kovetkezoGomb";
             kovetkezoGomb.Size = new Size(75, 23);
             kovetkezoGomb.TabIndex = 7;
@@ -112,7 +113,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(984, 507);
             Controls.Add(kovetkezoGomb);
             Controls.Add(pictureBox1);
             Controls.Add(valaszGomb3);

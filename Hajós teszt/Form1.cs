@@ -2,8 +2,8 @@ namespace Hajós_teszt
 {
     public partial class Form1 : Form
     {
-        List<Kerdes> OsszesKerdesek;
-        List<Kerdes> AktivKerdesek;
+        List<Kerdes> OsszesKerdesek; // alt: List<Kerdes> OsszesKerdesek = new List<Kerdes>();
+        List<Kerdes> AktivKerdesek;// alt: List<Kerdes> AktivKerdesek = new List<Kerdes>();
 
         int AktivKerdes = 0;
 
@@ -17,11 +17,11 @@ namespace Hajós_teszt
             List<Kerdes> kerdesek = new List<Kerdes>();
             StreamReader sr = new StreamReader("hajozasi_szabalyzat_kerdessor_BOM.txt");
 
-            while (!sr.EndOfStream)
+            while (!sr.EndOfStream) // alt: while (sr.EndOfStream == false)
             {
                 string sor = sr.ReadLine() ?? string.Empty; //beolvasunk egy sort. HA NEM, akkor visszaadunk egy string.empty-t
                 string[] tomb = sor.Split("\t");
-                if (tomb.Length != 7) continue;
+                if (tomb.Length != 7) continue; //ez a sor tök fölösleges
 
                 Kerdes k = new Kerdes()
                 {
@@ -29,15 +29,24 @@ namespace Hajós_teszt
                     Valasz1 = tomb[2],
                     Valasz2 = tomb[3],
                     Valasz3 = tomb[4],
-                    URL = tomb[5]
+                    URL = tomb[5],
                 };
 
                 int.TryParse(tomb[6], out int jovalasz);
                 k.HelyesValasz = jovalasz;
 
                 kerdesek.Add(k);
-
-
+                
+                /* Tömb elemeinek kiírása - gyak
+                
+                string szoveg000 = "";
+                for (int i = 0; i < tomb.Length; i++)
+                {
+                    szoveg000 += tomb[i].ToString()+"\n";
+                }
+                MessageBox.Show(szoveg000);
+                
+                */
             }
             return kerdesek;
 
@@ -51,7 +60,7 @@ namespace Hajós_teszt
             for (int i = 0; i < 7; i++)
             {
                 AktivKerdesek.Add(OsszesKerdesek[i]);
-                OsszesKerdesek.RemoveAt(0); //letöröljük: azé csináljuk hogy mégegyszer ne jelenjen meg ez a kérdés
+                OsszesKerdesek.RemoveAt(i); //letöröljük: azé csináljuk hogy mégegyszer ne jelenjen meg ez a kérdés
             }
 
             dataGridView1.DataSource = AktivKerdesek;
