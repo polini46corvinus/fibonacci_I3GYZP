@@ -20,6 +20,22 @@ namespace Hajós_teszt
             BorderStyle = BorderStyle.None;
             Cursor = Cursors.Hand;
 
+            Click += ValaszGomb_Click;
+
+
+        }
+
+        private void ValaszGomb_Click(object? sender, EventArgs e)
+        {
+            /*if () //rossz válasz
+            {
+                BackColor = Color.Red;
+            };
+            if () //jó válasz
+            {
+                BackColor = Color.Green;
+            };*/
+
 
         }
 

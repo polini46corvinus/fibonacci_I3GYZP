@@ -5,12 +5,12 @@ namespace Hajós_teszt
         List<Kerdes> OsszesKerdesek;
         List<Kerdes> AktivKerdesek;
 
-        int AktivKerdes = 5;
+        int AktivKerdes = 0;
 
         public Form1()
         {
             InitializeComponent();
-            MessageBox.Show(KerdesBeolvasas().Count.ToString());
+            //MessageBox.Show(KerdesBeolvasas().Count.ToString());
         }
         private List<Kerdes> KerdesBeolvasas()
         {
@@ -51,12 +51,12 @@ namespace Hajós_teszt
             for (int i = 0; i < 7; i++)
             {
                 AktivKerdesek.Add(OsszesKerdesek[i]);
-                OsszesKerdesek.RemoveAt(0);
+                OsszesKerdesek.RemoveAt(0); //letöröljük: azé csináljuk hogy mégegyszer ne jelenjen meg ez a kérdés
             }
 
             dataGridView1.DataSource = AktivKerdesek;
 
-            KerdesMegjelenites(AktivKerdesek[3]);
+            KerdesMegjelenites(AktivKerdesek[AktivKerdes]);
         }
 
         void KerdesMegjelenites(Kerdes kerdes)
@@ -76,5 +76,20 @@ namespace Hajós_teszt
                 pictureBox1.Visible = false;
             }
         }
+
+        private void kovetkezoGomb_Click(object sender, EventArgs e)
+        {
+            if (AktivKerdes < 7)
+            {
+                AktivKerdes++;
+            }
+            if (AktivKerdes == 7)
+            {
+                AktivKerdes = 0;
+            }
+
+            KerdesMegjelenites(AktivKerdesek[AktivKerdes]);
+        }
+
     }
 }

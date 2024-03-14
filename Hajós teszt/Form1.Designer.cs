@@ -34,6 +34,7 @@
             valaszGomb2 = new ValaszGomb();
             valaszGomb3 = new ValaszGomb();
             pictureBox1 = new PictureBox();
+            kovetkezoGomb = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -60,7 +61,7 @@
             // 
             valaszGomb1.BackColor = Color.LightGray;
             valaszGomb1.BorderStyle = BorderStyle.None;
-            valaszGomb1.Location = new Point(68, 119);
+            valaszGomb1.Location = new Point(68, 65);
             valaszGomb1.Multiline = true;
             valaszGomb1.Name = "valaszGomb1";
             valaszGomb1.ReadOnly = true;
@@ -71,7 +72,7 @@
             // 
             valaszGomb2.BackColor = Color.LightGray;
             valaszGomb2.BorderStyle = BorderStyle.None;
-            valaszGomb2.Location = new Point(68, 175);
+            valaszGomb2.Location = new Point(68, 121);
             valaszGomb2.Multiline = true;
             valaszGomb2.Name = "valaszGomb2";
             valaszGomb2.ReadOnly = true;
@@ -82,7 +83,7 @@
             // 
             valaszGomb3.BackColor = Color.LightGray;
             valaszGomb3.BorderStyle = BorderStyle.None;
-            valaszGomb3.Location = new Point(68, 231);
+            valaszGomb3.Location = new Point(68, 177);
             valaszGomb3.Multiline = true;
             valaszGomb3.Name = "valaszGomb3";
             valaszGomb3.ReadOnly = true;
@@ -97,11 +98,22 @@
             pictureBox1.TabIndex = 6;
             pictureBox1.TabStop = false;
             // 
+            // kovetkezoGomb
+            // 
+            kovetkezoGomb.Location = new Point(416, 231);
+            kovetkezoGomb.Name = "kovetkezoGomb";
+            kovetkezoGomb.Size = new Size(75, 23);
+            kovetkezoGomb.TabIndex = 7;
+            kovetkezoGomb.Text = "Következő";
+            kovetkezoGomb.UseVisualStyleBackColor = true;
+            kovetkezoGomb.Click += kovetkezoGomb_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(kovetkezoGomb);
             Controls.Add(pictureBox1);
             Controls.Add(valaszGomb3);
             Controls.Add(valaszGomb2);
@@ -125,5 +137,6 @@
         private ValaszGomb valaszGomb2;
         private ValaszGomb valaszGomb3;
         private PictureBox pictureBox1;
+        private Button kovetkezoGomb;
     }
 }
