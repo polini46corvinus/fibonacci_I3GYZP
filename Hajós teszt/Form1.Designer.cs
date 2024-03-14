@@ -45,7 +45,7 @@
             dataGridView1.Location = new Point(68, 287);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(846, 178);
+            dataGridView1.Size = new Size(846, 224);
             dataGridView1.TabIndex = 0;
             // 
             // label1
@@ -68,6 +68,7 @@
             valaszGomb1.ReadOnly = true;
             valaszGomb1.Size = new Size(631, 37);
             valaszGomb1.TabIndex = 3;
+            valaszGomb1.Click += valaszKatt1;
             // 
             // valaszGomb2
             // 
@@ -79,6 +80,7 @@
             valaszGomb2.ReadOnly = true;
             valaszGomb2.Size = new Size(631, 37);
             valaszGomb2.TabIndex = 4;
+            valaszGomb2.Click += valaszKatt2;
             // 
             // valaszGomb3
             // 
@@ -90,6 +92,7 @@
             valaszGomb3.ReadOnly = true;
             valaszGomb3.Size = new Size(631, 37);
             valaszGomb3.TabIndex = 5;
+            valaszGomb3.Click += valaszKatt3;
             // 
             // pictureBox1
             // 
@@ -113,7 +116,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(984, 507);
+            ClientSize = new Size(984, 532);
             Controls.Add(kovetkezoGomb);
             Controls.Add(pictureBox1);
             Controls.Add(valaszGomb3);
