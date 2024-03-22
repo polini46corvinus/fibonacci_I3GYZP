@@ -2,8 +2,8 @@ namespace Hajós_teszt
 {
     public partial class Form1 : Form
     {
-        List<Kerdes> OsszesKerdesek; // alt: List<Kerdes> OsszesKerdesek = new List<Kerdes>();
-        List<Kerdes> AktivKerdesek;// alt: List<Kerdes> AktivKerdesek = new List<Kerdes>();
+        List<Kerdes> OsszesKerdesek = new List<Kerdes>();
+        List<Kerdes> AktivKerdesek = new List<Kerdes>();
 
         int AktivKerdes = 0;
 
