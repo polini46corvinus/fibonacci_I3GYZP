@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices;
 using System.Security.Cryptography.X509Certificates;
 
 namespace Kígyós_játék
@@ -15,6 +16,7 @@ namespace Kígyós_játék
         int szint = 1;
 
         bool gombnyomas = false;
+        bool paused = false;
 
         List<KígyóElem> kígyólista = new List<KígyóElem>();
         List<Alma> almalista = new List<Alma>();
@@ -27,6 +29,26 @@ namespace Kígyós_játék
             MessageBox.Show("GAME OVER");
             Close();
             return;
+        }
+        
+        public void Pause()
+        {
+            paused = true;
+            timer1.Enabled = false;
+            kajagenerátorTimer.Enabled = false;
+            Label pausefelirat = new Label();
+            pausefelirat.Top = ClientRectangle.Height / 2-10;
+            pausefelirat.Left = ClientRectangle.Width / 2-30;
+            pausefelirat.Text = "PAUSED";
+            Controls.Add(pausefelirat);
+        }
+
+        public void continuePause()
+        {
+            timer1.Enabled = true;
+            kajagenerátorTimer.Enabled = true;
+            paused = false;
+            Controls.RemoveAt(Controls.Count-1);
         }
 
         public Form1() { InitializeComponent(); }
@@ -41,10 +63,7 @@ namespace Kígyós_játék
             fej_y += irány_y * KígyóElem.Méret;
 
             //saját farok halál
-            foreach (KígyóElem item in kígyólista)
-            {
-                if (item.Top == fej_y && item.Left == fej_x) { Halal(); }
-            }
+            foreach (KígyóElem item in kígyólista) { if (item.Top == fej_y && item.Left == fej_x) { Halal(); } }
 
             //egyél ALMÁT
             foreach (Alma alma1 in almalista)
@@ -60,7 +79,6 @@ namespace Kígyós_játék
                         szint = (hossz / 10) + 1;
                         timer1.Interval = Convert.ToInt16(timer1.Interval * 0.9);
                     }
-
                     break;
                 }
             }
@@ -99,54 +117,64 @@ namespace Kígyós_játék
 
         private void lefele(object sender, KeyEventArgs e)
         {
-            if (gombnyomas == false) //pufferszűrő
+            if (paused == true) {if (e.KeyCode == Keys.Escape) { continuePause(); }}
+
+            if (gombnyomas == false && paused == false) //pufferszűrő
             {
                 if (e.KeyCode == Keys.Up && irány_y != 1) { irány_y = -1; irány_x = 0; }
                 if (e.KeyCode == Keys.Down && irány_y != -1) { irány_y = 1; irány_x = 0; }
                 if (e.KeyCode == Keys.Left && irány_x != 1) { irány_y = 0; irány_x = -1; }
                 if (e.KeyCode == Keys.Right && irány_x != -1) { irány_y = 0; irány_x = 1; }
+                if (e.KeyCode == Keys.Escape) { Pause(); }
                 gombnyomas = true;
             }
         }
-
         private void kajagenerátorTimer_Tick(object sender, EventArgs e)
         {
             Random rnd = new Random();
-            int randomszam1 = rnd.Next(ClientRectangle.Height / KígyóElem.Méret);
-            int randomszam2 = rnd.Next(ClientRectangle.Width / KígyóElem.Méret);
+            int yloc = rnd.Next(ClientRectangle.Height / KígyóElem.Méret)*20;
+            int xloc = rnd.Next(ClientRectangle.Width / KígyóElem.Méret)*20;
             int esély = rnd.Next(10);
-            
-            if (esély > 2) //csinálj almát
-            {
-                Alma ujalma = new Alma();
-                ujalma.Top = randomszam1 * 20;
-                ujalma.Left = randomszam2 * 20;
-                Controls.Add(ujalma);
-                almalista.Add(ujalma);
-            }
-            else  //csinálj mérget
-            {
-                Méreg ujmereg = new Méreg();
-                ujmereg.Top = randomszam1 * 20;
-                ujmereg.Left = randomszam2 * 20;
-                if (mereglista.Count < 3)
-                {
-                    Controls.Add(ujmereg);
-                    mereglista.Add(ujmereg);
-                }
-                else
-                {
-                    KígyóElem levágandó = kígyólista[0];
-                    kígyólista.RemoveAt(0);
-                    Controls.Remove(levágandó);
 
-                    Méreg törlendőMéreg = mereglista[0];
-                    mereglista.RemoveAt(0);
-                    Controls.Remove(törlendőMéreg);
-                }
-                
+            bool vanEOttValami = false;
+
+            foreach (Control control in Controls)
+            {
+                if (control.Top != yloc && control.Width != xloc) { vanEOttValami = false; }
+                else { vanEOttValami = true;}
             }
-            
+            if (vanEOttValami == false)
+            {
+                if (esély > 2) //csinálj almát
+                {
+                    Alma ujalma = new Alma();
+                    ujalma.Top = yloc;
+                    ujalma.Left = xloc;
+                    Controls.Add(ujalma);
+                    almalista.Add(ujalma);
+                }
+                else  //csinálj mérget
+                {
+                    Méreg ujmereg = new Méreg();
+                    ujmereg.Top = yloc;
+                    ujmereg.Left = xloc;
+                    if (mereglista.Count < 3)
+                    {
+                        Controls.Add(ujmereg);
+                        mereglista.Add(ujmereg);
+                    }
+                    else
+                    {
+                        KígyóElem levágandó = kígyólista[0];
+                        kígyólista.RemoveAt(0);
+                        Controls.Remove(levágandó);
+
+                        Méreg törlendőMéreg = mereglista[0];
+                        mereglista.RemoveAt(0);
+                        Controls.Remove(törlendőMéreg);
+                    }
+                }
+            }
         }
     }
 }
