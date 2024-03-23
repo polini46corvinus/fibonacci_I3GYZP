@@ -82,12 +82,13 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Control;
             ClientSize = new Size(800, 450);
             Controls.Add(szintLabel);
             Controls.Add(hosszLabel);
             Controls.Add(lepesszamLabel);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Kígyós játék";
             Load += Form1_Load;
             KeyDown += lefele;
             ResumeLayout(false);
