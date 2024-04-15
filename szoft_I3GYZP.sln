@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kígyós játék", "Kígyó
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adatkötés", "Adatkötés\Adatkötés.csproj", "{19916DC9-5362-4BC1-8C49-AD8A02CFADDA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hajós (minta zh)", "Hajós (minta zh)\Hajós (minta zh).csproj", "{A29024DC-B4E7-44C7-8278-A4A51C34D090}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{19916DC9-5362-4BC1-8C49-AD8A02CFADDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19916DC9-5362-4BC1-8C49-AD8A02CFADDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19916DC9-5362-4BC1-8C49-AD8A02CFADDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A29024DC-B4E7-44C7-8278-A4A51C34D090}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A29024DC-B4E7-44C7-8278-A4A51C34D090}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A29024DC-B4E7-44C7-8278-A4A51C34D090}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A29024DC-B4E7-44C7-8278-A4A51C34D090}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
