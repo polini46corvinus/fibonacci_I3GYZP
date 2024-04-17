@@ -15,7 +15,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sakktábla", "Sakktábla\Sa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gyakorló1", "Gyakorló1\Gyakorló1.csproj", "{AA0F51CB-318B-4A20-B468-A5378398321F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hajós teszt", "Hajós teszt\Hajós teszt.csproj", "{69A625BD-0F7E-4F81-88B7-0A082012A46F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hajós teszt", "Hajós teszt\Hajós teszt.csproj", "{69A625BD-0F7E-4F81-88B7-0A082012A46F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kígyós játék", "Kígyós játék\Kígyós játék.csproj", "{2ED95533-3C17-411E-9CA7-BFB807405156}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adatkötés", "Adatkötés\Adatkötés.csproj", "{19916DC9-5362-4BC1-8C49-AD8A02CFADDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hajós (minta zh)", "Hajós (minta zh)\Hajós (minta zh).csproj", "{A29024DC-B4E7-44C7-8278-A4A51C34D090}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +57,18 @@ Global
 		{69A625BD-0F7E-4F81-88B7-0A082012A46F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69A625BD-0F7E-4F81-88B7-0A082012A46F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69A625BD-0F7E-4F81-88B7-0A082012A46F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2ED95533-3C17-411E-9CA7-BFB807405156}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ED95533-3C17-411E-9CA7-BFB807405156}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ED95533-3C17-411E-9CA7-BFB807405156}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ED95533-3C17-411E-9CA7-BFB807405156}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19916DC9-5362-4BC1-8C49-AD8A02CFADDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19916DC9-5362-4BC1-8C49-AD8A02CFADDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19916DC9-5362-4BC1-8C49-AD8A02CFADDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19916DC9-5362-4BC1-8C49-AD8A02CFADDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A29024DC-B4E7-44C7-8278-A4A51C34D090}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A29024DC-B4E7-44C7-8278-A4A51C34D090}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A29024DC-B4E7-44C7-8278-A4A51C34D090}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A29024DC-B4E7-44C7-8278-A4A51C34D090}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
