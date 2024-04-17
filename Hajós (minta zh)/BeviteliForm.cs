@@ -12,9 +12,8 @@ namespace Hajós__minta_zh_
 {
     public partial class BeviteliForm : Form
     {
-        public KerdesOsztaly kerdesosztaly;
-
-        BindingList<KerdesOsztaly> kerdesosztalyList2 = new BindingList<KerdesOsztaly>();
+        public KerdesOsztaly kerdesosztaly = new KerdesOsztaly();
+        public KerdesOsztaly kerdesosztaly2 = new KerdesOsztaly();
         public BeviteliForm()
         {
             InitializeComponent();
@@ -27,17 +26,13 @@ namespace Hajós__minta_zh_
 
         private void okButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("ok teszt");
-            KerdesOsztaly lista = new KerdesOsztaly();
-            lista.Szam = int.Parse(szamTextBox.Text);
-            lista.Kerdes = kerdesTextBox.Text;
-            lista.V1 = v1TextBox.Text;
-            lista.V2 = v2TextBox.Text;
-            lista.V3 = v3TextBox.Text;
-            lista.Kep = kepTextBox.Text;
-            lista.HelyesValasz = int.Parse(helyesValaszTextBox.Text);
-
-            kerdesosztalyList2.Add(lista);
+            kerdesosztaly2.Szam = int.Parse(szamTextBox.Text);
+            kerdesosztaly2.Kerdes = kerdesTextBox.Text;
+            kerdesosztaly2.V1 = v1TextBox.Text;
+            kerdesosztaly2.V2 = v2TextBox.Text;
+            kerdesosztaly2.V3 = v2TextBox.Text;
+            kerdesosztaly2.Kep = kepTextBox.Text;
+            kerdesosztaly2.HelyesValasz = int.Parse(helyesValaszTextBox.Text);
         }
     }
 }

@@ -54,13 +54,12 @@
             label1.AutoSize = true;
             label1.Location = new Point(30, 28);
             label1.Name = "label1";
-            label1.Size = new Size(35, 15);
+            label1.Size = new Size(130, 15);
             label1.TabIndex = 0;
-            label1.Text = "Szam";
+            label1.Text = "Szam [szám] KÖTELEZŐ";
             // 
             // szamTextBox
             // 
-            szamTextBox.DataBindings.Add(new Binding("Text", bindingSource1, "Szam", true));
             szamTextBox.Location = new Point(30, 46);
             szamTextBox.Name = "szamTextBox";
             szamTextBox.Size = new Size(375, 23);
@@ -140,7 +139,7 @@
             okButton.Location = new Point(330, 423);
             okButton.Name = "okButton";
             okButton.Size = new Size(75, 23);
-            okButton.TabIndex = 10;
+            okButton.TabIndex = 15;
             okButton.Text = "&OK";
             okButton.UseVisualStyleBackColor = true;
             okButton.Click += okButton_Click;
@@ -151,7 +150,7 @@
             cancelButton.Location = new Point(249, 423);
             cancelButton.Name = "cancelButton";
             cancelButton.Size = new Size(75, 23);
-            cancelButton.TabIndex = 11;
+            cancelButton.TabIndex = 14;
             cancelButton.Text = "&Mégse";
             cancelButton.UseVisualStyleBackColor = true;
             // 
@@ -160,7 +159,7 @@
             kepTextBox.Location = new Point(30, 316);
             kepTextBox.Name = "kepTextBox";
             kepTextBox.Size = new Size(375, 23);
-            kepTextBox.TabIndex = 13;
+            kepTextBox.TabIndex = 11;
             // 
             // label6
             // 
@@ -168,7 +167,7 @@
             label6.Location = new Point(30, 298);
             label6.Name = "label6";
             label6.Size = new Size(27, 15);
-            label6.TabIndex = 12;
+            label6.TabIndex = 10;
             label6.Text = "Kep";
             // 
             // helyesValaszTextBox
@@ -176,16 +175,16 @@
             helyesValaszTextBox.Location = new Point(30, 371);
             helyesValaszTextBox.Name = "helyesValaszTextBox";
             helyesValaszTextBox.Size = new Size(375, 23);
-            helyesValaszTextBox.TabIndex = 15;
+            helyesValaszTextBox.TabIndex = 13;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Location = new Point(30, 353);
             label7.Name = "label7";
-            label7.Size = new Size(73, 15);
-            label7.TabIndex = 14;
-            label7.Text = "HelyesValasz";
+            label7.Size = new Size(168, 15);
+            label7.TabIndex = 12;
+            label7.Text = "HelyesValasz [szám] KÖTELEZŐ";
             // 
             // BeviteliForm
             // 

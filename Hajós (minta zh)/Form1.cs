@@ -74,7 +74,13 @@ namespace Hajós__minta_zh_
         {
             BeviteliForm bf = new BeviteliForm();
             bf.kerdesosztaly = kerdesOsztalyBindingSource.Current as KerdesOsztaly;
-            bf.ShowDialog();
+            //bf.ShowDialog();
+
+            if (bf.ShowDialog() == DialogResult.OK)
+                {
+                    kerdesList.Add(bf.kerdesosztaly2);
+                }
+
             }
         }
     }
